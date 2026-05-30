@@ -89,6 +89,10 @@ export default function Dashboard() {
         Financial Overview
       </Typography>
 
+      <Typography variant="body1">
+        Just updating the code
+      </Typography>
+
       <Grid container spacing={3} sx={{ mb: 4 }}>
         <Grid size={{ xs: 12, md: 4 }}>
           <Card>

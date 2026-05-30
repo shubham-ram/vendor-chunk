@@ -12,7 +12,7 @@ dayjs.extend(relativeTime);
 const Insights = () => (
   <div style={{ padding: "20px", textAlign: "center" }}>
     <h2>Insights & Analytics</h2>
-    <p>Coming soon: Deep dive into your spending habits updating the</p>
+    <p>Coming soon: Deep dive into your spending habits</p>
   </div>
 );
 
