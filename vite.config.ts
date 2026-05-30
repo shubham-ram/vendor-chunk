@@ -5,5 +5,19 @@ import babel from "@rolldown/plugin-babel";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), babel({ presets: [reactCompilerPreset()] })],
- 
+  build: {
+    rolldownOptions: {
+      treeshake: false,
+        output: {
+          codeSplitting: {
+            groups: [
+              {
+                test: /node_modules/,
+                name: "vendor",
+              },
+            ],
+          },
+        },
+    },
+  },
 });
