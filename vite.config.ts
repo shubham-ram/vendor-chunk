@@ -8,16 +8,24 @@ export default defineConfig({
   build: {
     rolldownOptions: {
       treeshake: false,
-        output: {
-          codeSplitting: {
-            groups: [
-              {
-                test: /node_modules/,
-                name: "vendor",
-              },
-            ],
-          },
+      output: {
+        codeSplitting: {
+          groups: [
+            {
+              test: /node_modules\/(@mui|@emotion)/,
+              name: "ui",
+            },
+            {
+              test: /node_modules\/(lodash|dayjs)/,
+              name: "utils",
+            },
+            {
+              test: /node_modules\/(chart\.js|react-chartjs-2)/,
+              name: "charts",
+            },
+          ],
         },
+      },
     },
   },
 });
