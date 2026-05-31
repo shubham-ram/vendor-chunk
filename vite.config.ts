@@ -23,6 +23,11 @@ export default defineConfig({
               test: /node_modules\/(chart\.js|react-chartjs-2)/,
               name: "charts",
             },
+            {
+            // Catch-all: everything else from node_modules
+              test: /node_modules/,
+              name: "vendor",
+            }
           ],
         },
       },
